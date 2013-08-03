@@ -19,7 +19,7 @@ import java.util.Date;
 @Component("statusReader")
 public class MysqlStatusReaderImpl implements IStatusReader {
 
-    public static final String STATUS_QUERY = "select max(idstatus) idstatus from status;";
+    public static final String STATUS_QUERY = "select (FLOOR( 1 + RAND( ) * 1000 )) idstatus;";
     @Autowired
     @Qualifier("jdbcTemplate")
     JdbcTemplate jdbcTemplate;
