@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- JSON configs -->
+    <bean id="objectMapper" class="org.codehaus.jackson.map.ObjectMapper" />
+
+    <bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView" />
+
+    <bean id="jsonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="objectMapper">
+            <ref bean="JacksonObjectMapper" />
+        </property>
+    </bean>
+
+    <bean
+            class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
+        <property name="objectMapper">
+            <ref bean="JacksonObjectMapper" />
+        </property>
+    </bean>
+
+    <bean id="JacksonObjectMapper" class="org.codehaus.jackson.map.ObjectMapper" />
+</beans>
