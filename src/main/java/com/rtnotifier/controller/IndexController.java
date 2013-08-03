@@ -6,10 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-@RequestMapping("/api")
 public class IndexController {
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value={"/","/api"},method = RequestMethod.GET)
 
 	public String printWelcome(ModelMap model) {
 		model.addAttribute("message", "RT notifier!");

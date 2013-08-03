@@ -1,8 +1,10 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xmlns:wairole="http://www.w3.org/2005/01/wai-rdf/GUIRoleTaxonomy#" xmlns:waistate="http://www.w3.org/2005/07/aaa">
 <head>
     <script type='text/javascript' src='https://www.google.com/jsapi'></script>
-    <script type="text/javascript"  src="/res/js/websockets.js"></script>
+
+    <script type="text/javascript"  src="<c:url value="/res/js/websockets.js"/>"></script>
 </head>
 
 <body>

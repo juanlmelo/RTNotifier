@@ -1,16 +1,11 @@
 
-//var wsUri = "ws://" + document.location.host + document.location.pathname + "/ws/status";
-var wsUri = "ws://" + document.location.host  + "/ws/status";
+var wsUri = "ws://" + document.location.host + document.location.pathname + "ws/status";
 
 var count = 0;
 var websocket;
 var output = document.getElementById("output");
 
 start();
-
-var json = JSON.stringify({
-    "status": 9
-});
 
 function start(){
     websocket = new WebSocket(wsUri);
